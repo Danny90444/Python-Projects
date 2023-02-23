@@ -2,6 +2,8 @@
 #create dictionary to store shows as keys and rankings as values
 
 
+# GITHUB TEST
+
 show_dict = {"Avatar": [100,200,300]}
 print(show_dict.values())
 
