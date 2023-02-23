@@ -4,18 +4,18 @@
 
 # GITHUB TEST
 
-show_dict = {"Avatar": [100,200,300]}
+''' show_dict = {"Avatar": [100,200,300]}
 print(show_dict.values())
 
 #prompt user for rankings based on show
 
-''' nick_shows  = {}
+ nick_shows  = {}
 for i in range(3):
     show = input("What show? ")
     rating = input ("what is the rating")
 
     nick_shows[show] = rating
-print (nick_shows ) '''
+print (nick_shows ) 
 
 nick_toons = ["avatar", "space Jam", "matrix"]
 shows_nick = {}
@@ -24,7 +24,7 @@ for i in nick_toons:
     shows_nick[i] = rating
 
 print (shows_nick)
-
+'''
 
 #find average for votes 
 
@@ -82,10 +82,16 @@ from dotenv import load_dotenv
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
+
 client = discord.Client()
 
 @client.event
 async def on_ready():
     print(f'{client.user} has connected to Discord!')
+
+    print(
+        f'{client.user} is connected to the following guild:\n'
+        f'{guild.name}(id: {guild.id})'
+    )
 
 client.run(TOKEN)
